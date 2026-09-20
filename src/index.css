@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 228 14% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 228 14% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 228 14% 10%;
+    --primary: 243 75% 59%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 224 12% 22%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 14% 45%;
+    --accent: 243 75% 95%;
+    --accent-foreground: 243 65% 42%;
+    --destructive: 0 72% 46%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+    --border: 214 30% 90%;
+    --input: 214 30% 90%;
+    --ring: 243 75% 59%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 240 7% 5%;
+    --foreground: 210 20% 96%;
+    --card: 240 6% 8%;
+    --card-foreground: 210 20% 96%;
+    --popover: 240 6% 8%;
+    --popover-foreground: 210 20% 96%;
+    --primary: 243 80% 67%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5% 14%;
+    --secondary-foreground: 210 16% 88%;
+    --muted: 240 5% 14%;
+    --muted-foreground: 215 14% 62%;
+    --accent: 243 35% 18%;
+    --accent-foreground: 243 85% 80%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 160 70% 45%;
+    --success-foreground: 160 90% 96%;
+    --border: 240 5% 16%;
+    --input: 240 5% 16%;
+    --ring: 243 80% 67%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-primary/20;
+  }
+}
+
+/* Scrollbar sutil */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.25);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* Impressão — exportação do currículo em PDF com texto selecionável */
+@media print {
+  body {
+    background: #fff !important;
+  }
+  body * {
+    visibility: hidden;
+  }
+  .print-area,
+  .print-area * {
+    visibility: visible;
+    color: #111 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-color: #ddd !important;
+  }
+  .print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+@page {
+  size: A4;
+  margin: 0;
+}

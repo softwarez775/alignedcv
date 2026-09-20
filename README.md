@@ -3,6 +3,28 @@
 Plataforma inteligente de **matchmaking entre candidatos e vagas**: a IA analisa seu perfil,
 compara com vagas, explica a compatibilidade e gera currículos otimizados para **ATS**.
 
+## Screenshots
+
+### 1. Landing page
+
+![Landing page — Seu currículo. A vaga certa. O match inteligente](screenshot/1.jpg)
+
+### 2. Onboarding — Vamos conhecer você (etapa 1 de 4)
+
+![Onboarding — nome, cargo atual e área profissional](screenshot/2.jpg)
+
+### 3. Onboarding — Importe seu currículo (etapa 2 de 4)
+
+![Onboarding — envio de PDF, DOCX ou TXT, ou cole o texto](screenshot/3.jpg)
+
+### 4. Onboarding — Conte-nos o que você procura (etapa 3 de 4)
+
+![Onboarding — cargo desejado, localização, modelo de trabalho, senioridade e pretensão salarial](screenshot/4.jpg)
+
+### 5. Onboarding — Seu perfil está pronto (etapa 4 de 4)
+
+![Onboarding — insight da IA com competências identificadas e vagas compatíveis](screenshot/5.jpg)
+
 ## Stack
 
 - Vite + React + TypeScript
